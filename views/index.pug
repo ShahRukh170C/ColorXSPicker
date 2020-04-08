@@ -1,0 +1,39 @@
+meta(charset='utf-8')
+meta(http-equiv='X-UA-Compatible' content='IE=edge')
+title ColorXS
+meta(name='description' content)
+meta(name='viewport' content='width=device-width,initial-scale=1')
+link(href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap' rel='stylesheet')
+link(rel='stylesheet' href='/css/main.css')
+link(rel='stylesheet' href='/css/color-Picker.css')
+header
+  h1.title_ME
+  section.navBar
+    .logo
+      ul
+        li
+          a(href)
+            h1 ColorXS
+            h1.
+              
+              
+    .navBar-Section
+      ul
+        li
+          a(href) Home
+        li
+          a(href) Pick Color
+        li
+          a(href) Companies
+        li
+          a(href) About Us
+       
+    .navBar-right
+      ul
+        li Game
+.colorPicker
+  each color in Colorz
+    #clickMe.Colors(style=`background-color: ${color.name};`)
+      a(href=`/api/v1/color/${color.id}`)
+  
+script(src='index.js')
